@@ -1,0 +1,20 @@
+firstly download the datasets from this html file then to traiing model
+
+if u are not understanding anything then just search it on youtube :)
+
+Practical workflow recommendation :_:
+
+brooo use thisss jupyter notebook
+
+ structure the notebook with one cell per pipeline stage, exactly mirroring the 7 steps in qshield_train_with_datasets.py:
+
+ Cell 1  — pip installs + imports
+Cell 2  — dataset path config + availability check
+Cell 3  — load CMU / Balabit / HMOG
+Cell 4  — fuse modalities
+Cell 5  — train FFT encoder
+Cell 6  — enroll users
+Cell 7  — train LSTM autoencoder  ← this takes longest, run once and save
+Cell 8  — tune fidelity threshold + plot ROC
+Cell 9  — full evaluation + results table
+
