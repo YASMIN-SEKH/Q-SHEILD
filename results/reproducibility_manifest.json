@@ -1,0 +1,75 @@
+{
+  "dataset": "DSL-StrongPasswordData.csv",
+  "dataset_shape": [
+    20400,
+    34
+  ],
+  "n_subjects": 51,
+  "random_state": 42,
+  "enroll_sessions": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_sessions": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "best_k_sessions": 3,
+  "nperseg_list": [
+    4,
+    8,
+    16
+  ],
+  "n_stats_per_bin": 12,
+  "lda_dim": 50,
+  "unified_dim": 101,
+  "agg_feature_dim": 372,
+  "state_vector_design": "LDA_proj(50) + XGB_proba(51) -> L2_normalise -> 101-dim |psi>",
+  "xgb_params": {
+    "n_estimators": 200,
+    "max_depth": 7,
+    "learning_rate": 0.04,
+    "subsample": 0.75,
+    "colsample_bytree": 0.75,
+    "min_child_weight": 2,
+    "gamma": 0.05,
+    "reg_alpha": 0.1,
+    "reg_lambda": 1.5,
+    "eval_metric": "mlogloss",
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "fusion_weights": [
+    1.4796651316553902,
+    0.9295105122450703,
+    0.282738982879251
+  ],
+  "fusion_intercept": -8.25522873992126,
+  "results": {
+    "global_eer_pct": 1.0588,
+    "mean_per_subj_eer_pct": 0.0784,
+    "auc": 0.999536,
+    "eer_llr_only_pct": 2.0,
+    "eer_fidelity_only_pct": 5.9265,
+    "eer_bc_only_pct": 15.1765,
+    "xgb_test_accuracy": 0.8676,
+    "cv_mean_accuracy": 0.8873,
+    "cohens_d": 8.3063,
+    "t_stat": 88.4348,
+    "p_value": 1.2662194275061594e-164,
+    "n_genuine_pairs": 204,
+    "n_impostor_pairs": 10200
+  },
+  "environment": {
+    "python": "3.13.12",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "sklearn": "1.9.0",
+    "xgboost": "3.2.0",
+    "scipy": "1.17.1"
+  }
+}
