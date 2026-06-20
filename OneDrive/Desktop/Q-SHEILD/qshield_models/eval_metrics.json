@@ -1,0 +1,11 @@
+{
+  "EER": 28.42,
+  "EER_thresh": 0.9432,
+  "AUC": 0.7805,
+  "FAR_at_EER": 28.636,
+  "FRR_at_EER": 28.203,
+  "mean_genuine_fidelity": 0.9517,
+  "mean_impostor_fidelity": 0.9265,
+  "anomaly_caught": 0,
+  "impostor_passed_fidelity": 0
+}
