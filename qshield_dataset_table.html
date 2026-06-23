@@ -1,0 +1,242 @@
+
+<h2 class="sr-only">Q-Shield dataset reference table — 8 publicly available behavioral biometrics datasets with download links</h2>
+<style>
+.wrap{overflow-x:auto;padding:1rem 0}
+table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px}
+col.c1{width:18%}col.c2{width:8%}col.c3{width:9%}col.c4{width:9%}col.c5{width:12%}col.c6{width:18%}col.c7{width:13%}col.c8{width:13%}
+thead tr{border-bottom:1.5px solid var(--color-border-secondary)}
+thead th{font-size:11px;font-weight:500;color:var(--color-text-secondary);text-align:left;padding:8px 10px 8px 0;white-space:nowrap}
+tbody tr{border-bottom:0.5px solid var(--color-border-tertiary)}
+tbody tr:last-child{border-bottom:none}
+tbody td{padding:10px 10px 10px 0;vertical-align:top;color:var(--color-text-primary);line-height:1.5}
+.name{font-weight:500;color:var(--color-text-primary);display:block;margin-bottom:2px}
+.src{font-size:11px;color:var(--color-text-secondary)}
+.badge{display:inline-block;font-size:10px;font-weight:500;padding:2px 7px;border-radius:20px;white-space:nowrap}
+.ks{background:#EEEDFE;color:#3C3489}
+.mo{background:#E6F1FB;color:#0C447C}
+.to{background:#E1F5EE;color:#085041}
+.mm{background:#FAEEDA;color:#633806}
+.rec{background:#EAF3DE;color:#27500A;margin-left:4px}
+.acc-free{background:#EAF3DE;color:#27500A}
+.acc-tou{background:#FAEEDA;color:#633806}
+.acc-email{background:#FAECE7;color:#712B13}
+.pill{display:inline-block;font-size:11px;color:var(--color-text-secondary);background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:20px;padding:1px 7px;margin:2px 2px 0 0;white-space:nowrap}
+.link-cell{display:flex;flex-direction:column;gap:5px}
+.lnk{font-size:11px;color:var(--color-text-info);text-decoration:none;display:flex;align-items:center;gap:3px;word-break:break-all}
+.lnk:hover{text-decoration:underline}
+.fmt{font-size:11px;color:var(--color-text-secondary);font-family:var(--font-mono)}
+.note{font-size:11px;color:var(--color-text-secondary);line-height:1.5}
+</style>
+
+<div class="wrap">
+<table>
+<colgroup>
+<col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"><col class="c7"><col class="c8">
+</colgroup>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Modality</th>
+<th>Subjects</th>
+<th>Sessions</th>
+<th>Key signals</th>
+<th>Description</th>
+<th>Access</th>
+<th>Links</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>
+  <span class="name">CMU Keystroke Benchmark</span>
+  <span class="src">Killourhy &amp; Maxion, DSN 2009 · CMU</span>
+</td>
+<td><span class="badge ks">Keystroke</span><span class="badge rec">Primary</span></td>
+<td>51</td>
+<td>400 per user (8 sessions × 50)</td>
+<td>
+  <span class="pill">Hold time (H)</span>
+  <span class="pill">Down-Down (DD)</span>
+  <span class="pill">Up-Down (UD)</span>
+  <span class="pill">31 features</span>
+</td>
+<td class="note">Gold-standard fixed-text benchmark. Password ".tie5Roanl". Direct input to Q-Shield FFT encoder. Best for establishing baseline EER.</td>
+<td><span class="badge acc-free">Free — no sign-up</span></td>
+<td class="link-cell">
+  <a class="lnk" href="https://www.cs.cmu.edu/~keystroke/" target="_blank"><i class="ti ti-external-link" style="font-size:12px" aria-hidden="true"></i> cs.cmu.edu/~keystroke</a>
+  <a class="lnk" href="https://www.kaggle.com/datasets/carnegiecylab/keystroke-dynamics-benchmark-data-set" target="_blank"><i class="ti ti-external-link" style="font-size:12px" aria-hidden="true"></i> Kaggle mirror</a>
+</td>
+</tr>
+
+<tr>
+<td>
+  <span class="name">Aalto Mobile Keystroke DB</span>
+  <span class="src">Dhakal et al. · Aalto University</span>
+</td>
+<td><span class="badge ks">Keystroke</span></td>
+<td>37,370</td>
+<td>15 sentences per user</td>
+<td>
+  <span class="pill">Hold latency (HL)</span>
+  <span class="pill">Inter-key latency (IL)</span>
+  <span class="pill">Press latency (PL)</span>
+  <span class="pill">Release latency (RL)</span>
+</td>
+<td class="note">Largest public keystroke DB. Mobile free-text transcription. Used by TypeFormer (EER 3.25%). Tests Q-Shield encoder on mobile scenario.</td>
+<td><span class="badge acc-free">Free — direct download</span></td>
+<td class="link-cell">
+  <a class="lnk" href="http://userinterfaces.aalto.fi/136Mkeystrokes" target="_blank"><i class="ti ti-external-link" style="font-size:12px" aria-hidden="true"></i> userinterfaces.aalto.fi</a>
+</td>
+</tr>
+
+<tr>
+<td>
+  <span class="name">Balabit Mouse Dynamics</span>
+  <span class="src">Fülöp et al., 2016 · Balabit / One Identity</span>
+</td>
+<td><span class="badge mo">Mouse</span><span class="badge rec">Primary</span></td>
+<td>10</td>
+<td>Train + test splits</td>
+<td>
+  <span class="pill">X, Y coordinates</span>
+  <span class="pill">Timestamp</span>
+  <span class="pill">Button state</span>
+  <span class="pill">Move / Click / Drag</span>
+</td>
+<td class="note">Standard mouse dynamics benchmark. Remote desktop sessions. Git clone — no account needed. Used in nearly all mouse biometrics papers.</td>
+<td><span class="badge acc-free">Free — git clone</span></td>
+<td class="link-cell">
+  <a class="lnk" href="https://github.com/balabit/Mouse-Dynamics-Challenge" target="_blank"><i class="ti ti-brand-github" style="font-size:12px" aria-hidden="true"></i> github.com/balabit/Mouse-Dynamics-Challenge</a>
+</td>
+</tr>
+
+<tr>
+<td>
+  <span class="name">DFL Mouse Dynamics</span>
+  <span class="src">Antal &amp; Denes-Fazakas · Sapientia University</span>
+</td>
+<td><span class="badge mo">Mouse</span></td>
+<td>~30</td>
+<td>Multiple sessions</td>
+<td>
+  <span class="pill">Timestamp</span>
+  <span class="pill">X, Y position</span>
+  <span class="pill">Button events</span>
+  <span class="pill">Same format as Balabit</span>
+</td>
+<td class="note">Structurally identical to Balabit. Completely free, no restrictions. Used for cross-dataset validation and transfer learning experiments.</td>
+<td><span class="badge acc-free">Free — no restrictions</span></td>
+<td class="link-cell">
+  <a class="lnk" href="https://www.ms.sapientia.ro/~manyi/mousedynamics/" target="_blank"><i class="ti ti-external-link" style="font-size:12px" aria-hidden="true"></i> ms.sapientia.ro/~manyi/mousedynamics</a>
+</td>
+</tr>
+
+<tr>
+<td>
+  <span class="name">HMOG Dataset</span>
+  <span class="src">Sitová et al., IEEE TIFS 2016 · William &amp; Mary</span>
+</td>
+<td><span class="badge to">Touch</span><span class="badge rec">Primary</span></td>
+<td>100</td>
+<td>24 per user (8 × 3 tasks)</td>
+<td>
+  <span class="pill">Touch x, y, pressure, area</span>
+  <span class="pill">Accelerometer (3-axis)</span>
+  <span class="pill">Gyroscope (3-axis)</span>
+  <span class="pill">Swipe + tap + keystroke</span>
+</td>
+<td class="note">Gold-standard mobile touch benchmark. Reading, writing, navigation tasks. Sitting + walking conditions. EER 7.16% (walking). 2–6 hrs/subject.</td>
+<td><span class="badge acc-tou">Free — ToU agreement</span></td>
+<td class="link-cell">
+  <a class="lnk" href="https://hmog-dataset.github.io/hmog/" target="_blank"><i class="ti ti-external-link" style="font-size:12px" aria-hidden="true"></i> hmog-dataset.github.io/hmog</a>
+  <a class="lnk" href="https://github.com/hmog-dataset/hmog" target="_blank"><i class="ti ti-brand-github" style="font-size:12px" aria-hidden="true"></i> github.com/hmog-dataset/hmog</a>
+</td>
+</tr>
+
+<tr>
+<td>
+  <span class="name">HuMIdb</span>
+  <span class="src">Acien et al., 2021 · BiDAlab, UAM</span>
+</td>
+<td><span class="badge to">Touch</span></td>
+<td>600</td>
+<td>8 tasks per user</td>
+<td>
+  <span class="pill">Swipe + tap</span>
+  <span class="pill">Accelerometer</span>
+  <span class="pill">Gyroscope</span>
+  <span class="pill">Magnetometer</span>
+  <span class="pill">Fixed + free-text KS</span>
+  <span class="pill">Handwriting (digits)</span>
+</td>
+<td class="note">Largest + most diverse mobile DB. 14 sensors, 300+ device models, 14 countries, unsupervised. Best for cross-device generalization of Q-Shield encoder.</td>
+<td><span class="badge acc-email">Email request</span></td>
+<td class="link-cell">
+  <a class="lnk" href="https://github.com/BiDAlab/HuMIdb" target="_blank"><i class="ti ti-brand-github" style="font-size:12px" aria-hidden="true"></i> github.com/BiDAlab/HuMIdb</a>
+  <span class="note" style="font-size:10px">Email signed license to atvs@uam.es</span>
+</td>
+</tr>
+
+<tr>
+<td>
+  <span class="name">BB-MAS Dataset</span>
+  <span class="src">Belman et al., 2019 · Syracuse / FIU</span>
+</td>
+<td><span class="badge mm">Multimodal</span></td>
+<td>117</td>
+<td>Desktop + Tablet + Phone</td>
+<td>
+  <span class="pill">Fixed + free-text keystroke</span>
+  <span class="pill">Touch swipe</span>
+  <span class="pill">Gait (walk, stairs)</span>
+  <span class="pill">Accelerometer + Gyroscope</span>
+  <span class="pill">3 devices per subject</span>
+</td>
+<td class="note">Unique: typing, swipe, gait from same 117 subjects across 3 devices. 3.5M keystroke events + 57.1M IMU data points. Best for cross-modality fusion validation.</td>
+<td><span class="badge acc-email">Author contact</span></td>
+<td class="link-cell">
+  <a class="lnk" href="https://arxiv.org/abs/1912.02736" target="_blank"><i class="ti ti-external-link" style="font-size:12px" aria-hidden="true"></i> arxiv.org/abs/1912.02736</a>
+  <span class="note" style="font-size:10px">Contact corresponding author via paper</span>
+</td>
+</tr>
+
+<tr>
+<td>
+  <span class="name">UMDAA-02</span>
+  <span class="src">Mahbub et al., BTAS 2016 · Univ. of Maryland</span>
+</td>
+<td><span class="badge mm">Multimodal</span></td>
+<td>48</td>
+<td>~248 sessions/user over 2 months</td>
+<td>
+  <span class="pill">Touchscreen</span>
+  <span class="pill">Gyroscope + Accel.</span>
+  <span class="pill">Magnetometer</span>
+  <span class="pill">Front camera</span>
+  <span class="pill">GPS + WiFi + Bluetooth</span>
+</td>
+<td class="note">Long-duration continuous dataset (2 months, same device). 14 sensors. Best for testing temporal drift and session-long behavioral consistency in Q-Shield.</td>
+<td><span class="badge acc-email">Author request</span></td>
+<td class="link-cell">
+  <a class="lnk" href="https://arxiv.org/abs/1610.07468" target="_blank"><i class="ti ti-external-link" style="font-size:12px" aria-hidden="true"></i> arxiv.org/abs/1610.07468</a>
+  <span class="note" style="font-size:10px">Request via UMD GAMMA lab</span>
+</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:1rem;padding-top:1rem;border-top:0.5px solid var(--color-border-tertiary)">
+<span style="font-size:11px;color:var(--color-text-tertiary);align-self:center">Modality:</span>
+<span style="font-size:11px;padding:2px 8px;border-radius:20px;background:#EEEDFE;color:#3C3489">Keystroke</span>
+<span style="font-size:11px;padding:2px 8px;border-radius:20px;background:#E6F1FB;color:#0C447C">Mouse</span>
+<span style="font-size:11px;padding:2px 8px;border-radius:20px;background:#E1F5EE;color:#085041">Touch</span>
+<span style="font-size:11px;padding:2px 8px;border-radius:20px;background:#FAEEDA;color:#633806">Multimodal</span>
+<span style="font-size:11px;padding:2px 8px;border-radius:20px;background:#EAF3DE;color:#27500A">Primary</span>
+<span style="margin-left:12px;font-size:11px;color:var(--color-text-tertiary);align-self:center">Access:</span>
+<span style="font-size:11px;padding:2px 8px;border-radius:20px;background:#EAF3DE;color:#27500A">Free — no sign-up</span>
+<span style="font-size:11px;padding:2px 8px;border-radius:20px;background:#FAEEDA;color:#633806">Free — ToU agreement</span>
+<span style="font-size:11px;padding:2px 8px;border-radius:20px;background:#FAECE7;color:#712B13">Email request</span>
+</div>
