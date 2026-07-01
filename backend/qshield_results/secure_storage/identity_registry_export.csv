@@ -1,0 +1,2 @@
+subject_id,record_id,template_sha256,template_dim,kem_algorithm,dsa_algorithm,key_status,qkd_used,session_fingerprint,enrolled_utc,last_updated_utc
+s002,947db420-bf9b-4b11-9c9f-0b9f41c19b11,595f763ad9cc62c17fd858676ebb10c643faff82613cd69f2969df6402e90dfd,101,ML-KEM-1024 / Kyber-1024  (NIST FIPS 203),ML-DSA-87   / Dilithium-5 (NIST FIPS 204),active,1,dcb503dc0c297e05fd4e04743644146e0cd2b9fc2ac7b042a34ab9bb0223af71,2026-06-24T06:12:31Z,2026-06-24T06:16:36.171559Z
