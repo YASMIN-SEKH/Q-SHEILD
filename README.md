@@ -1,4 +1,4 @@
-# Q-Shield v2: Quantum-Resistant Biometric Authentication Engine
+# Q-Secured: Quantum-Resistant Biometric Authentication Engine
 
 **✅ FULLY INTEGRATED & PRODUCTION READY**
 
@@ -358,7 +358,7 @@ curl http://localhost:8000/health
 
 ## License
 
-Proprietary - Q-Shield v2 Authentication Engine
+Proprietary - Q-Secured Authentication Engine
 
 ## Support
 
